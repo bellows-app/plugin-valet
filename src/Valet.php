@@ -5,11 +5,11 @@ namespace Bellows\Plugins;
 use Bellows\PluginSdk\Contracts\Installable;
 use Bellows\PluginSdk\Facades\Console;
 use Bellows\PluginSdk\Facades\Project;
+use Bellows\PluginSdk\Facades\Value;
 use Bellows\PluginSdk\Plugin;
 use Bellows\PluginSdk\PluginResults\CanBeInstalled;
 use Bellows\PluginSdk\PluginResults\InstallationResult;
 use Illuminate\Support\Facades\Process;
-use Bellows\PluginSdk\Facades\Value;
 
 class Valet extends Plugin implements Installable
 {

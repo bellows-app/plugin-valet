@@ -1,3 +1,3 @@
-# plugin-valet
+# Bellows Valet Plugin
 
-[https://bellows.dev](https://bellows.dev)
+[https://bellows.dev/docs/plugins/valet](https://bellows.dev/docs/plugins/valet)
