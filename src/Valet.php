@@ -10,6 +10,7 @@ use Bellows\PluginSdk\Plugin;
 use Bellows\PluginSdk\PluginResults\CanBeInstalled;
 use Bellows\PluginSdk\PluginResults\InstallationResult;
 use Illuminate\Support\Facades\Process;
+use Illuminate\Support\Str;
 
 class Valet extends Plugin implements Installable
 {
@@ -52,7 +53,10 @@ class Valet extends Plugin implements Installable
         if ($secureSite) {
             $result->environmentVariable(
                 'APP_URL',
-                'https://' . Project::domain(),
+                Str::of(Project::domain())
+                    ->replace('http://', 'https://')
+                    ->start('https://')
+                    ->toString(),
             );
         }
 
